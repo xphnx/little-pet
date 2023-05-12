@@ -2,9 +2,10 @@ import { Suspense} from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import classNames from "classnames";
 
-import { AboutPageLazy } from "./pages/AboutPage/AboutPage.lazy";
-import { MainPageLazy } from "./pages/MainPage/MainPage.lazy";
-import { useThemeContext } from "./theme/useThemeContext";
+import { AboutPage } from "../pages/AboutPage";
+import { MainPage } from "../pages/MainPage";
+import { useThemeContext } from "./providers/ThemeProvider";
+
 import './styles/index.scss'
 
 const App = () => {
@@ -16,8 +17,8 @@ const App = () => {
             <button onClick={changeTheme}>theme</button>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path='/' element={<MainPageLazy />} />
-                    <Route path='/about' element={<AboutPageLazy />} />
+                    <Route path='/' element={<MainPage />} />
+                    <Route path='/about' element={<AboutPage />} />
                 </Routes>
             </Suspense>
         </div>
