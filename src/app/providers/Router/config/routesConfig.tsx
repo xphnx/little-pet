@@ -1,7 +1,7 @@
-import { RouteProps } from "react-router-dom";
+import { RouteProps } from 'react-router-dom';
 
-import { MainPage } from "pages/MainPage";
-import { AboutPage } from "pages/AboutPage";
+import { MainPage } from 'pages/MainPage';
+import { AboutPage } from 'pages/AboutPage';
 
 export enum RoutePages {
     MAIN = 'main',
@@ -11,11 +11,10 @@ export enum RoutePages {
 export const routesConfig: Record<RoutePages, RouteProps> = {
     [RoutePages.MAIN]: {
         path: '/',
-        element: <MainPage />
+        element: <MainPage />,
     },
     [RoutePages.ABOUT]: {
         path: '/about',
-        element: <AboutPage />
-    }
-}
-
+        element: <AboutPage />,
+    },
+};

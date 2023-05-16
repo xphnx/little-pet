@@ -1,3 +1,6 @@
 {
-  "language": "English"
+  "language": "English",
+  "main page": "Главная",
+  "about page": "О нас",
+  "loading": "Загрузка..."
 }

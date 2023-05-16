@@ -1,3 +1,6 @@
 {
-  "language": "Русский"
+  "language": "Русский",
+  "main page": "Main",
+  "about page": "About",
+  "loading": "Loading..."
 }
