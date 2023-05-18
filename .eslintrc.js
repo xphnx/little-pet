@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -39,7 +40,10 @@ module.exports = {
         'import/extensions': 'off',
         'no-underscore-dangle': 'off',
         'no-shadow': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['fill', 'to'] }],
+        'i18next/no-literal-string': ['error',
+            { markupOnly: true, ignoreAttribute: ['fill', 'to'] },
+        ],
+        'max-len': ['error', 100, { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,

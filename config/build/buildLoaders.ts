@@ -9,6 +9,17 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         use: ['@svgr/webpack'],
     };
 
+    const babelLoader = {
+        test: /\.(js|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env'],
+            },
+        },
+    };
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -18,7 +29,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 options: {
                     modules: {
                         auto: (resourcePath: string) => resourcePath.includes('.module.'),
-                        localIdentName: options.isDev ? '[path][name]__[local]--[hash:base64:8]' : '[hash:base64:8]',
+                        localIdentName: options.isDev
+                            ? '[path][name]__[local]--[hash:base64:8]'
+                            : '[hash:base64:8]',
                     },
                 },
             },
@@ -42,6 +55,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     };
 
     return [
-        svgLoader, typescriptLoader, cssLoader, fileLoader,
+        fileLoader,
+        svgLoader,
+        babelLoader,
+        typescriptLoader,
+        cssLoader,
     ];
 }
