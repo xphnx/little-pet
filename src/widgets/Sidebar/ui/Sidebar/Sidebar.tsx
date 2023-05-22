@@ -16,9 +16,11 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
     const handleClick = () => setCollapsed((prev) => !prev);
 
     return (
-        <div className={classNames(cls.Sidebar, className, { [cls.collapsed]: isCollapsed })}>
-            {/* eslint-disable-next-line i18next/no-literal-string */}
-            <button type="button" onClick={handleClick}>toggle</button>
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.Sidebar, className, { [cls.collapsed]: isCollapsed })}
+        >
+            <button data-testid="sidebar-toggle" type="button" onClick={handleClick}>toggle</button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LanguageSwitcher className={cls.lang} />

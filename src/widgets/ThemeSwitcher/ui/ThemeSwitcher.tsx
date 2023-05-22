@@ -22,6 +22,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
         >
             {theme === Theme.DARK ? <DarkMode fill="var(--primary-color)" width={45} height={45} />
                 : <LightMode fill="var(--primary-color)" width={45} height={45} />}
+
         </Button>
     );
 };
