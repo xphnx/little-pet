@@ -2,5 +2,9 @@
   "language": "Русский",
   "main page": "Main",
   "about page": "About",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "page not found": "Page is not found",
+  "error": "Error",
+  "error message": "Something went wrong... Try to reload the page",
+  "reload page": "Reload Page"
 }

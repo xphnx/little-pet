@@ -1,4 +1,5 @@
 .Navbar {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
@@ -6,6 +7,8 @@
     padding: 10px 20px;
     background-color: var(--inverted-bg-color);
     border-bottom: 1px solid rgb(var(--inverted-primary-color-rgb) 0.3);
+    box-shadow: 0 2px 8px 0 rgb(34 34 37 / 30%);
+    z-index: 1;
 }
 
 .navLinks {

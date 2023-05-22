@@ -2,5 +2,9 @@
   "language": "English",
   "main page": "Главная",
   "about page": "О нас",
-  "loading": "Загрузка..."
+  "loading": "Загрузка...",
+  "page not found": "Страница не найдена",
+  "error": "Ошибка",
+  "error message": "Что-то пошло не так... Попробуйте обновить страницу",
+  "reload page": "Обновить страницу"
 }

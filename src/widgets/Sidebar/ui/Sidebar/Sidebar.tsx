@@ -11,7 +11,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
-    const [isCollapsed, setCollapsed] = useState(true);
+    const [isCollapsed, setCollapsed] = useState(false);
 
     const handleClick = () => setCollapsed((prev) => !prev);
 
